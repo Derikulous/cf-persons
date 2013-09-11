@@ -1,0 +1,19 @@
+<h1><%= @person.name %></h1>
+<p>
+  Phone: <%= @person.phone %>
+</p>
+<% if @address %>
+  <p>
+    Address: <%= @address.street_address %>
+  </p>
+  <div>
+    City: <%= @address.city %>
+  </div>
+  <div>
+    State: <%= @address.state %>
+  </div>
+  <div>
+    Zip: <%= @address.zip %>
+  </div>
+<% end %>
+<%= link_to "Delete", person_path(@person), method: :delete %>
